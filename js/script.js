@@ -424,7 +424,7 @@ var shoeOffsetTop = 0;
 var shoeOffsetLeft = 0;
 var documentGutterWidth = (($(document).width() - documentWrapWidth) / 2);
 var screenAnimationTime = 1000;
-var screens = new Array( 'startScreen',
+var screens = new Array( 'start_screen',
 						 'flexfilm',
 						 'upper',
 						 'progrid',
@@ -482,9 +482,9 @@ function sizeToWindow() {
 	
 	// Extra 5 Added to height to account for odd window height rounding issue.
 	screenHeight = (Math.ceil($(window).height()) > MIN_HEIGHT ? $(window).height() : MIN_HEIGHT) + 1;
-	documentGutterWidth = ((Math.ceil($(document).width()) - documentWrapWidth) / 2);
+	documentGutterWidth = ((Math.ceil($(document).width()) - documentWrapWidth) / 2);    
 	
-	$('#startScreen').height(screenHeight);
+	$('#start_screen').height(screenHeight);
 	var startScreenWrapTop = ((screenHeight-$('#startScreenWrap').height())/2);
 	if( startScreenWrapTop < 80 ) startScreenWrapTop = 80;
 	var startScreenWrapLeft = ($(window).width()-1020)/2;
