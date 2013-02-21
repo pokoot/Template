@@ -1,15 +1,20 @@
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
+/**
+ * Author: Harold Kim 
+ */
+
+
+/**
+ * HTML5 display definitions 
+ */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none1; }
 [hidden] { display: none; }
 
 
-/* =============================================================================
-   Base
-   ========================================================================== */
+/**
+ * Base 
+ */
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; font-family:Helvetica, Arial, sans-serif }
@@ -17,18 +22,20 @@ body { margin: 0; font-size: 1em; line-height: 1.4; font-family:Helvetica, Arial
 ::selection { background: #58d420; color: #fff; text-shadow: none; }
 
 
-/* =============================================================================
-   Links
-   ========================================================================== */
+/**
+ * Links 
+ */
 a { color: #00e; }
 a:visited { color: #551a8b; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
-/* =============================================================================
-   Typography
-   ========================================================================== */
+
+/**
+ * Typography 
+ */
+
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 blockquote { margin: 1em 40px; }
@@ -46,29 +53,33 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 h1,h2,h3,h4,h5 {margin:0; padding:0;}
 
-/* =============================================================================
-   Lists
-   ========================================================================== */
+
+/**
+ * Lists 
+ */
+
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
-/* =============================================================================
-   Embedded content
-   ========================================================================== */
+
+/**
+ * Embedded content 
+ */
 images { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 svg:not(:root) { overflow: hidden; }
 
 
-/* =============================================================================
-   Figures
-   ========================================================================== */
+
+/**
+ * Figures 
+ */
 figure { margin: 0; }
 
 
-/* =============================================================================
-   Forms
-   ========================================================================== */
+/**
+ * Forms 
+ */
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
 label { cursor: pointer; }
@@ -86,17 +97,19 @@ input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 
-/* =============================================================================
-   Tables
-   ========================================================================== */
 
+/**
+ * Tables 
+ */
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 
-/* =============================================================================
-   Chrome Frame Prompt
-   ========================================================================== */
+
+
+/**
+ * Chrome Frame prompt 
+ */
 
 .chromeframe {
 	margin: 0;
@@ -110,9 +123,10 @@ td { vertical-align: top; }
 }
 
 
-/* ==|== primary styles =====================================================
-   Author:
-   ========================================================================== */
+/**
+ * Start of css 
+ */
+
 
 .parallax-viewport {
     position: relative;     /* relative, absolute, fixed */
@@ -131,7 +145,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	position: absolute;
 	width: 100%;
 	height: 60px;
-	background: url(../images/topNav-bg.png) repeat-x;
+	background: url(../images/top-nav-bg.png) repeat-x;
 	text-align: center;
 	top: 0; left: 0;
 	z-index:10;
@@ -1321,3 +1335,9 @@ a#visit_facebook {
 
 /* limit content to certain viewport */
 .wrap { width: 1100px; margin:0px auto; text-align:left; position: relative; }
+/**
+ *  
+ */
+/**
+ *  
+ */

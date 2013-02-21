@@ -1,13 +1,8 @@
 $(document).ready(function() {
 	
-	if( $('html').hasClass('lt-ie7') ) {
-		$('#startScreen').hide();
-		$('#chromeframe').height($(window).height());
-	}
- 
-	/****************************************************************************************
-	  Process Window Scroll Movements
-	 ***************************************************************************************/
+    /**
+     * Process Window Scroll Movements 
+     */
 	var lastScrollTop = 0;
 	$(window).scroll(function() {
 		var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
