@@ -378,7 +378,7 @@ $(document).ready(function() {
 		if( !$('html').hasClass('lt-ie7') )
 		{
 			// Show Hidden Elements
-			$('#startScreenWrap').show();
+			
 			$('#startBtn').show();
 			$('#contentWrap').show();
 			$('#shoeBrowser').show();
@@ -484,13 +484,10 @@ function sizeToWindow() {
 	screenHeight = (Math.ceil($(window).height()) > MIN_HEIGHT ? $(window).height() : MIN_HEIGHT) + 1;
 	documentGutterWidth = ((Math.ceil($(document).width()) - documentWrapWidth) / 2);    
 	
+    log( "start screen height = " + screenHeight );
+
 	$('#start_screen').height(screenHeight);
-	var startScreenWrapTop = ((screenHeight-$('#startScreenWrap').height())/2);
-	if( startScreenWrapTop < 80 ) startScreenWrapTop = 80;
-	var startScreenWrapLeft = ($(window).width()-1020)/2;
-	if( startScreenWrapLeft < 75 ) startScreenWrapLeft = 75;
-	$('#startScreenWrap').css('left',  startScreenWrapLeft + "px").css('top', startScreenWrapTop + "px");
-	
+    
 	$('#shoeBrowser').height(screenHeight);
 	$('#getYours .wrap').css('min-height',screenHeight+"px");
 	$('#thanks .wrap').css('min-height',screenHeight+"px");

@@ -181,29 +181,16 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 #start_screen {
 	position: relative;
-	background: #FFFFFF;
+	background: green;
 	padding: 0; margin: 0;
 	outline: 0;
 	width: 100%;
 	height: 100%;
 }
 
-#start_screen .zebra {
-	width: 100%; height:100%;
-	background-image: url('../images/zebra-pattern.png');
-	background-repeat: repeat-x;
-	background-position: center;
-	background-size: cover;
-	position: relative;
-}
+ 
 
-
-#start_screen .highlite {
-	width: 100%; height:100%;
-	background: url(../images/start_screen-highlite.png) repeat-x bottom left;
-	display: none;
-}
-
+ 
 #startBtn, .downBtn { 
 	position: absolute;
 	z-index: 5;
@@ -300,49 +287,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 #social button.socialTwitter:hover { background-position: -36px -35px; }
 
-/* Start Sceen Content */
-#startScreenWrap {
-	width: 1020px;
-	height: 650px;
-	position: absolute;
-	top: 120px;
-	display: none;
-}
-
-#startScreenWrap h1 {
-	font: normal 5.250em/0.833em "Interstate Black";
-	color: #fff;
-	letter-spacing: -2px;
-	margin-bottom: 25px;
-}
-
-#startScreenWrap h2 {
-	font: normal 2.750em/0.909em "Interstate Black";
-	color: #000;
-	letter-spacing: -2px;
-	text-transform: uppercase;
-}
-
-#startScreenWrap div.shoeSplash {
-	position: absolute;
-	left: 0; top: 150px;
-	text-align: right;
-	z-index: 0;
-}
-#startScreenWrap p { position: relative; z-index: 10; }
-#startScreenWrap p a {
-	color: #D41010; text-decoration: none;
-	font: bold 1.081em Interstate;
-	text-transform: uppercase;
-	background: url('../images/home-shoesplash-link-arrow.png') 0 3px no-repeat;
-	padding-left: 13px;
-	z-index: 10;
-}
-
-#startScreenWrap p a:hover {
-	color: #fff;
-	background-position: 0 -17px;
-}
+ 
 
 #intro {
 	color: #8d8d8d;
