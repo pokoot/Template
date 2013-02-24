@@ -376,8 +376,7 @@ $(document).ready(function() {
 	$(window).load(function () {
 		
 		// Handle IE 6
-		if( !$('html').hasClass('lt-ie7') )
-		{
+		if( !$('html').hasClass('lt-ie7') ){
 			// Show Hidden Elements
 			
 			$('#start_button').show();
