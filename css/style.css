@@ -143,39 +143,10 @@ body { background: #2a2a2a; overflow-x: hidden; }
 .wrap { 
     width: 1000px; 
     margin:0px auto; 
-    text-align:left; 
+    text-align:center; 
     position: relative; 
-    background-color:pink;
 }
 
-
-#top-nav {
-	width: 100%;
-	height: 60px;	
-    background-color: #313131;
-	text-align: center;	
-	z-index:10;
-	-moz-transition: top 250ms ease-in-out;
-	-webkit-transition: top 250ms ease-in-out;
-}
-
-#top-nav .wrap .logo {
-	background: url(../images/top-nav-logo.png) no-repeat;
-	float: left; 
-	width: 103px; height: 47px;    
-}
-
-#top-nav .wrap h1 {
-	float: right;
-	color: #fff;
-	font-family:   sans-serif;
-	font-size: 0.938em;
-	letter-spacing: 0px;
-	margin-right: 0px;
-	font-weight: bold;
-	margin-top: 23px;
-	line-height: 0.74em;
-}
 
 #start_screen {
 	position: relative;
@@ -187,24 +158,101 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	height: 100%;
 }
 
+#start_screen .border {
+    height: 10px; 
+    background-color:#313131;
+}
+
+#start_screen .container {
+    width: 100%; 
+    height: 300px;   
+    background-color:#FFFFFF;
+}
+
+#start_screen .cartoon{
+    text-align:center;
+    padding-top:38px; 
+}
+
+#start_screen .social {
+    background-color:#202020;
+    width: 100%;
+    height: 75px;
+}
+
+#start_screen .social .media {
+    background-color:#202020;
+    height: 70px;
+    width: 1000px;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top: 5px;
+}
  
 
+#start_screen ul {
+   
+    list-style: none;
+    margin: 0;
+    margin-left: 220px;
+    background-color: blue;
+    text-align: center;
+}
+
+
+
+
+#start_screen li {
+    height: 64px;
+    width: 64px;
+    float: left;
+    background-color: #313131;
+    margin-right: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+#start_screen #facebook {
+    background: url('../images/social/facebook.png') no-repeat 0 0;
+}
+
+#start_screen #twitter {
+    background: url('../images/social/twitter.png') no-repeat 0 0;
+}
+
+#start_screen #flickr {
+    background: url('../images/social/flickr.png') no-repeat 0 0;
+}
+
+#start_screen #google {
+    background: url('../images/social/google.png') no-repeat 0 0;
+}
+
+#start_screen #linkedin {
+    background: url('../images/social/linkedin.png') no-repeat 0 0;
+}
+
+#start_screen #youtube {
+    background: url('../images/social/youtube.png') no-repeat 0 0;
+}
+
  
-#start_button, .downBtn { 
+#start_button, .down_button { 
     cursor: pointer;
 	position: absolute;
 	z-index: 5;
 	display: block;
 	left: 50%;
 	bottom: 5%;
-	margin-left: 10px;
+	margin-left: 0px;
 	-moz-transition: bottom 250ms ease-in-out;
 	-webkit-transition: bottom 250ms ease-in-out;
 	
 }
-.downBtn { display: block; z-index: 999999; height: 55px; }
+.down_button { display: block; z-index: 999999; height: 55px; }
 
-#start_button button, .downBtn button {
+#start_button button, .down_button button {
 	border-top-left-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
 	-moz-border-top-right-radius: 5px;
