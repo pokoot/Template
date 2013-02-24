@@ -183,6 +183,7 @@ $(document).ready(function() {
 	$('#nav_colors a').click(function(event){ event.preventDefault(); currentScreen = 6; performScroll(); });
 	$('#nav_getyours a').click(function(event){ event.preventDefault(); currentScreen = 7; performScroll(); });
 	
+    /*	
 	// Pop-Out Buttons
 	$('.pop_out button').hover(
 		function(evt){
@@ -289,8 +290,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	
-    /*
+
 	// Video & Detail Button Hover Events
 	$('.vidWrap a').hover(
 		function(){
@@ -487,6 +487,8 @@ var womens_urls = new Array(
  **********************************************************/
 function sizeToWindow() {
 	
+    log( "sizeToWindow" );
+
 	// Extra 5 Added to height to account for odd window height rounding issue.
 	screenHeight = (Math.ceil($(window).height()) > MIN_HEIGHT ? $(window).height() : MIN_HEIGHT) + 1;
 	documentGutterWidth = ((Math.ceil($(document).width()) - documentWrapWidth) / 2);    
@@ -500,35 +502,21 @@ function sizeToWindow() {
 	$('#thanks .wrap').css('min-height',screenHeight+"px");
 	$('#comingSoon .wrap').css('min-height',screenHeight+"px");
 	$('#content_wrap section').height(screenHeight).width($(window).width());
-
+/*
 	$('.shoe_part').css('top', ((screenHeight-$('.shoe_part').height())/2) + "px");
 	$('.shoe_part').css('left',($(window).width()-$('.shoe_part').width())/2+"px");
 	$('.shoe_shadow').css('top', ((screenHeight-$('.shoe_part').height())/2) + $('.shoe_part').height() + 30 + "px");
 	$('.shoe_shadow').css('left',($(window).width()-$('.shoe_shadow').width())/2+"px");
 	
-	$('#chooser_menu').css('left', colorBrowserMenuLeftOffset + "px" );
-	$('#chooser_selected').css('left', colorBrowserMenuLeftOffset + ((colorBrowserCurrentItem-1)*colorBrowserMenuItemWidth) + "px");
+	//$('#chooser_menu').css('left', colorBrowserMenuLeftOffset + "px" );
+	//$('#chooser_selected').css('left', colorBrowserMenuLeftOffset + ((colorBrowserCurrentItem-1)*colorBrowserMenuItemWidth) + "px");
 
-
-	$('.persp_background').css('top', ((screenHeight-perspBgHeight)/2) + "px");
-	$('.persp_background').css('left', ($(window).width()-perspBgWidth)/2 + "px");
-	$('.glow').css('top', ((screenHeight-perspBgHeight)/2) + "px");
-	$('.glow').css('left', ($(window).width()-perspBgWidth)/2 + "px");
-	
+ 
 	
 	shoeOffsetLeft = ($(window).width()-$('.shoe_part').width())/2;
 	shoeOffsetTop = ((screenHeight-$('.shoe_part').height())/2);
 
-	// Position Pop-Outs
-	$('#flex_pop1').css('top', shoeOffsetTop + 150 + "px").css('left', shoeOffsetLeft + 35 + "px");
-	$('#flex_pop2').css('top', shoeOffsetTop + 100 + "px").css('left', shoeOffsetLeft + 250 + "px");
-	$('#upper_pop1').css('top', shoeOffsetTop + 160 + "px").css('left', shoeOffsetLeft + 85 + "px");
-	$('#upper_pop2').css('top', shoeOffsetTop + 225 + "px").css('left', shoeOffsetLeft + 520 + "px");
-	$('#progrid_pop1').css('top', shoeOffsetTop + 235 + "px").css('left', shoeOffsetLeft + 50 + "px");
-	$('#midsole_pop1').css('top', shoeOffsetTop + 220 + "px").css('left', shoeOffsetLeft + 170 + "px");
-	$('#sole_pop1').css('top', shoeOffsetTop + 100 + "px").css('left', shoeOffsetLeft + 130 + "px");
-	$('#sole_pop2').css('top', shoeOffsetTop + 40 + "px").css('left', shoeOffsetLeft + 340 + "px");
-	$('#sole_pop3').css('top', shoeOffsetTop + 200 + "px").css('left', shoeOffsetLeft + 400 + "px");
+   
 
 	// Shoe Build Section H1's
 	var h1Offset = $(window).height()*.1;
@@ -571,6 +559,7 @@ function sizeToWindow() {
 	colorBrowserMenuItemWidth = $('#chooser_menu ul li').width() + 14; // 14px right margin
 	$('#chooser_menu').css('left', colorBrowserMenuLeftOffset + "px" );
 	$('#chooser_selected').css('left', colorBrowserMenuLeftOffset + ((colorBrowserCurrentItem-1)*colorBrowserMenuItemWidth) + "px");
+    */
 
 }
 
@@ -667,487 +656,89 @@ function unpin_ShoeComponent(component){ component.css('position','absolute'); }
   Animates "selected" indicator for Shoe Color Browser 
  **********************************************************/
 function animateSelector(){
+    /*
 	oldLeft = parseInt($('#chooser_selected').css('left'));
 	newLeft = colorBrowserMenuLeftOffset + ((colorBrowserCurrentItem-1)*colorBrowserMenuItemWidth);
 	speed = Math.abs(newLeft-oldLeft)/colorBrowserMenuItemWidth;
 	// tweaked as per tom's request - ss
 	$('#chooser_selected').animate( { left: newLeft + "px" }, 200*speed );
+    */
 }
+
+
+
+
 
 /***********************************************************
   Individual Screen Setups
  **********************************************************/
 
-function setup_flexfilm()
-{
+function setup_flexfilm(){
+
+    log( "setup flex ... " );
+    log( flexfilmSetupComplete );
+
 	if(!flexfilmSetupComplete){
-		
-          /*
-		$('#video_flexfilm_1').css('left', "-185px").css('top', (shoeOffsetTop-20)+"px").css('opacity', '0');
-		$('#video_flexfilm_1').animate(
-			{left: '45px', opacity: '1'},
-			800,
-			function() { $('#video_flexfilm_1').plaxify({"xRange":60,"yRange":60});}
-		);
-		
-		$('#video_lbl_flexfilm_1').css('left', "-185px").css('top', (shoeOffsetTop+80)+"px").css('opacity', '0');
-		$('#video_lbl_flexfilm_1').animate(
-			{left: '110px', opacity: '1'},
-			500,
-			function() { $('#video_lbl_flexfilm_1').plaxify({"xRange":100,"yRange":100});}
-		);
-		
-		$('#detail_flexfilm_1').css('right', "-185px").css('top', (shoeOffsetTop+20)+"px").css('opacity', '0');
-		$('#detail_flexfilm_1').animate(
-			{right: '69px', opacity: '1'},
-			700,
-			function() { $('#detail_flexfilm_1').plaxify({"xRange":60,"yRange":60});}
-		);
-	  	
-		$('#detail_lbl_flexfilm_1').css('right', "-185px").css('top', (shoeOffsetTop+149)+"px").css('opacity', '0');
-		$('#detail_lbl_flexfilm_1').animate(
-			{right: '145px', opacity: '1'},
-			400,
-			function() { $('#detail_lbl_flexfilm_1').plaxify({"xRange":100,"yRange":100});}
-		);
-		
-
-    
-		$('#detail_flexfilm_2').css('right', ($(window).width()-shoeOffsetLeft-760)+"px").css('bottom', "-185px").css('opacity', '0');
-		$('#detail_flexfilm_2').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-440)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_flexfilm_2').plaxify({"xRange":60,"yRange":60});}
-		);
-
-        
-		$('#detail_lbl_flexfilm_2').css('right', ($(window).width()-shoeOffsetLeft-720)+"px").css('bottom', "-185px").css('opacity', '0');
-		$('#detail_lbl_flexfilm_2').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-320)+"px", opacity: '1'},
-			500,
-			function() { $('#detail_lbl_flexfilm_2').plaxify({"xRange":100,"yRange":100});}
-		);
-       
-		
-		$('#detail_flexfilm_3').css('left', "-185px").css('top', (shoeOffsetTop-20)+"px").css('opacity', '0');
-		$('#detail_flexfilm_3').animate(
-			{left: '45px', opacity: '1'},
-			800,
-			function() { $('#detail_flexfilm_3').plaxify({"xRange":60,"yRange":60});}
-		);
-
-		$('#detail_lbl_flexfilm_3').css('left', "-185px").css('top', (shoeOffsetTop+80)+"px").css('opacity', '0');
-		$('#detail_lbl_flexfilm_3').animate(
-			{left: '110px', opacity: '1'},
-			500,
-			function() { $('#detail_lbl_flexfilm_3').plaxify({"xRange":100,"yRange":100});}
-		);
-
-        
-		$('#quote_flexfilm_1').css('bottom', $('#quote_flexfilm_1').height()*-1+"px").css('left', (shoeOffsetLeft-40)+"px").css('opacity', '0');
-		$('#quote_flexfilm_1').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-320)+"px", opacity: '0.8'},
-			800,
-			function() { $('#quote_flexfilm_1').plaxify({"xRange":200,"yRange":140});}
-		);
-		
-        
-		$('#quote_flexfilm_2').css('top', $('#quote_flexfilm_2').height()*-1+"px").css('right', ($(window).width()-shoeOffsetLeft-660)+"px").css('opacity', '0');
-		$('#quote_flexfilm_2').animate(
-			{top: (shoeOffsetTop)+"px", opacity: '0.45'},
-			700,
-			function() { $('#quote_flexfilm_2').plaxify({"xRange":120,"yRange":50});}
-		);
-        */
-		
-		$('#flexfilm .line1').plaxify({"xRange":200,"yRange":100});
-		$('#flexfilm .line2').plaxify({"xRange":140,"yRange":50});
-		$('#flexfilm .line3').plaxify({"xRange":120,"yRange":40});
-		$('#flexfilm .line4').plaxify({"xRange":100,"yRange":30});
-		$('#flexfilm .line5').plaxify({"xRange":80,"yRange":20});
-		$('#flexfilm .line6').plaxify({"xRange":60,"yRange":10});
-		$('#flexfilm-bg').plaxify({"xRange":25,"yRange":25});
-		$('#flexfilm-shoe-shadow').plaxify({"xRange":95,"yRange":95});
-
+         
 		flexfilmSetupComplete = true;
+
+        log( flexfilmSetupComplete );
+
 	}
 	
-	show_flexfilm_hotspots();
 	
-	$.plax.enable({ "activityTarget": $('#flexfilm')});
+	//$.plax.enable({ "activityTarget": $('#flexfilm')});
 }
-function reset_flexfilm()
-{
-	$.plax.disable();
-	hide_flexfilm_hotspots();
-}
-function show_flexfilm_hotspots() {
-	$('#flex_pop1').fadeIn('slow');
-	$('#flex_pop2').fadeIn('slow');
-}
-function hide_flexfilm_hotspots() {
-	$('#flex_pop1').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-	$('#flex_pop2').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-}
+function reset_flexfilm(){
 
+    log( "reset flexfilm " );
+	//$.plax.disable();
+}
+ 
 
-function setup_upper()
-{
+function setup_upper(){
 	if(!upperSetupComplete) {
-	
-
-		$('#video_upper_1').css('right', "-185px").css('top', (shoeOffsetTop+60)+"px").css('opacity', '0');
-		$('#video_upper_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-870)+"px", opacity: '1'},
-			800,
-			function() { $('#video_upper_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#video_lbl_upper_1').css('right', "-185px").css('top', (shoeOffsetTop+90)+"px").css('opacity', '0');
-		$('#video_lbl_upper_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-810)+"px", opacity: '1'},
-			600,
-			function() { $('#video_lbl_upper_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-
-
-		$('#detail_upper_1').css('left', "50px").css('top', "-185px").css('opacity', '0');
-		$('#detail_upper_1').animate(
-			{top: (shoeOffsetTop+10)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_upper_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#detail_lbl_upper_1').css('left', "80px").css('top', "-185px").css('opacity', '0');
-		$('#detail_lbl_upper_1').animate(
-			{top: (shoeOffsetTop+140)+"px", opacity: '1'},
-			500,
-			function() { $('#detail_lbl_upper_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-		
-		$('#detail_upper_2').css('left', "-185px").css('top', (shoeOffsetTop+250)+"px").css('opacity', '0');
-		$('#detail_upper_2').animate(
-			{left: '150px', opacity: '1'},
-			800,
-			function() { $('#detail_upper_2').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#detail_lbl_upper_2').css('left', "-185px").css('top', (shoeOffsetTop+300)+"px").css('opacity', '0');
-		$('#detail_lbl_upper_2').animate(
-			{left: '180px', opacity: '1'},
-			500,
-			function() { $('#detail_lbl_upper_2').plaxify({"xRange":100,"yRange":100}); }
-		);
-		
-		$('#quote_upper_1').css('top',$('#quote_upper_1').height()*-1+"px").css('left', (shoeOffsetLeft+200)+"px").css('opacity', '0');
-		$('#quote_upper_1').animate(
-			{top: (shoeOffsetTop+280)+"px", opacity: '0.6'},
-			800,
-			function() { $('#quote_upper_1').plaxify({"xRange":160,"yRange":90}); }
-		);
-		
-		$('#quote_upper_2').css('right', $('#quote_upper_2').width()*-1+"px").css('top', (shoeOffsetTop-10)+"px").css('opacity', '0').css('z-index', '1500');
-		$('#quote_upper_2').animate(
-			{right: ($(window).width()-shoeOffsetLeft-700)+"px", opacity: '0.8'},
-			600,
-			function() { $('#quote_upper_2').plaxify({"xRange":80,"yRange":30}); }
-		);
-
-		$('#keyword_upper_1').css('bottom', $('#keyword_upper_1').height()*-1+"px").css('left', (shoeOffsetLeft+400)+"px").css('opacity', '0');
-		$('#keyword_upper_1').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-580)+"px", opacity: '1'},
-			650,
-			function() { $('#keyword_upper_1').plaxify({"xRange":200,"yRange":50}); }
-		);
-		
-		$('#upper .line1').plaxify({"xRange":200,"yRange":100});
-		$('#upper .line2').plaxify({"xRange":140,"yRange":50});
-		$('#upper .line3').plaxify({"xRange":120,"yRange":40});
-		$('#upper .line4').plaxify({"xRange":100,"yRange":30});
-		$('#upper .line5').plaxify({"xRange":80,"yRange":20});
-		$('#upper .line6').plaxify({"xRange":60,"yRange":10});
-		$('#upper-bg').plaxify({"xRange":25,"yRange":25});
-		$('#upper-shoe-shadow').plaxify({"xRange":95,"yRange":95});
-		
 		upperSetupComplete = true;
 	}
-	
-	show_upper_hotspots();
 	$.plax.enable({ "activityTarget": $('#upper')});
 }
-function reset_upper()
-{
-	hide_upper_hotspots();
+function reset_upper(){
 	$.plax.disable();
 }
-function show_upper_hotspots() {
-	$('#upper_pop1').fadeIn('slow');
-	$('#upper_pop2').fadeIn('slow');
-}
-function hide_upper_hotspots() {
-	$('#upper_pop1').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-	$('#upper_pop2').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-}
 
 
-
-function setup_progrid()
-{
+function setup_progrid(){
 	if(!progridSetupComplete) {
-
-		$('#video_progrid_1').css('left', "-185px").css('top', shoeOffsetTop+"px").css('opacity', '0');
-		$('#video_progrid_1').animate(
-			{left: '10px', opacity: '1'},
-			800,
-			function() { $('#video_progrid_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#video_lbl_progrid_1').css('left', "-185px").css('top', (shoeOffsetTop+160)+"px").css('opacity', '0');
-		$('#video_lbl_progrid_1').animate(
-			{left: '90px', opacity: '1'},
-			600,
-			function() { $('#video_lbl_progrid_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-		
-		$('#detail_progrid_1').css('right', "-185px").css('top', (shoeOffsetTop+100)+"px").css('opacity', '0');
-		$('#detail_progrid_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-860)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_progrid_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#detail_lbl_progrid_1').css('right', "-185px").css('top', (shoeOffsetTop+130)+"px").css('opacity', '0');
-		$('#detail_lbl_progrid_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-820)+"px", opacity: '1'},
-			900,
-			function() { $('#detail_lbl_progrid_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-		
-		$('#quote_progrid_1').css('top', $('#quote_progrid_1').height()*-1+"px").css('left', (shoeOffsetLeft+430)+"px").css('opacity', '0');
-		$('#quote_progrid_1').animate(
-			{top: (shoeOffsetTop+30)+"px", opacity: '0.8'},
-			700,
-			function() { $('#quote_progrid_1').plaxify({"xRange":200,"yRange":140}); }
-		);
-		
-		$('#quote_progrid_2').css('top',$('#quote_progrid_2').height()*-1+"px").css('left', (shoeOffsetLeft+40)+"px").css('opacity', '0');
-		$('#quote_progrid_2').animate(
-			{top: (shoeOffsetTop-50)+"px", opacity: '0.3'},
-			400,
-			function() { $('#quote_progrid_2').plaxify({"xRange":160,"yRange":90}); }
-		);
-
-		$('#keyword_progrid_1').css('bottom', $('#keyword_progrid_1').height()*-1+"px").css('left', (shoeOffsetLeft-180)+"px").css('opacity', '0');
-		$('#keyword_progrid_1').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-550)+"px", opacity: '1'},
-			600,
-			function() { $('#keyword_progrid_1').plaxify({"xRange":180,"yRange":50}); }
-		);
-		
-		$('#progrid .line1').plaxify({"xRange":200,"yRange":100});
-		$('#progrid .line2').plaxify({"xRange":140,"yRange":50});
-		$('#progrid .line3').plaxify({"xRange":120,"yRange":40});
-		$('#progrid .line4').plaxify({"xRange":100,"yRange":30});
-		$('#progrid .line5').plaxify({"xRange":80,"yRange":20});
-		$('#progrid .line6').plaxify({"xRange":60,"yRange":10});
-		$('#progrid-bg').plaxify({"xRange":25,"yRange":25});
-		$('#progrid-shoe-shadow').plaxify({"xRange":95,"yRange":95});
-		
+	 
 		progridSetupComplete = true;
 	}
-	
-	show_progrid_hotspots();
+
 	$.plax.enable({ "activityTarget": $('#progrid')});
 }
-function reset_progrid()
-{
-	hide_progrid_hotspots();
+function reset_progrid(){
 	$.plax.disable();
 }
-function show_progrid_hotspots() {
-	$('#progrid_pop1').fadeIn('slow');
-}
-function hide_progrid_hotspots() {
-	$('#progrid_pop1').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-}
 
-
-function setup_midsole()
-{
-	if(!midsoleSetupComplete) {
-/*
-		$('#video_midsole_1').css('left', "-185px").css('top', (shoeOffsetTop+170)+"px").css('opacity', '0');
-		$('#video_midsole_1').animate(
-			{left: (shoeOffsetLeft-250)+"px", opacity: '1'},
-			800,
-			function() { $('#video_midsole_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-		
-		$('#video_lbl_midsole_1').css('left', "-185px").css('top', (shoeOffsetTop+300)+"px").css('opacity', '0');
-		$('#video_lbl_midsole_1').animate(
-			{left: (shoeOffsetLeft-200)+"px", opacity: '1'},
-			600,
-			function() { $('#video_lbl_midsole_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-*/
-
-		$('#detail_midsole_1').css('right', "-185px").css('top', (shoeOffsetTop+80)+"px").css('opacity', '0');
-		$('#detail_midsole_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-900)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_midsole_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#detail_lbl_midsole_1').css('right', "-185px").css('top', (shoeOffsetTop+110)+"px").css('opacity', '0');
-		$('#detail_lbl_midsole_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-940)+"px", opacity: '1'},
-			700,
-			function() { $('#detail_lbl_midsole_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-
-		$('#detail_midsole_2').css('left', "-185px").css('top', (shoeOffsetTop+70)+"px").css('opacity', '0');
-		$('#detail_midsole_2').animate(
-			{left: (shoeOffsetLeft-250)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_midsole_2').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#detail_lbl_midsole_2').css('left', "-185px").css('top', (shoeOffsetTop+200)+"px").css('opacity', '0');
-		$('#detail_lbl_midsole_2').animate(
-			{left: (shoeOffsetLeft-200)+"px", opacity: '1'},
-			600,
-			function() { $('#detail_lbl_midsole_2').plaxify({"xRange":100,"yRange":100}); }
-		);
-
-		$('#quote_midsole_1').css('top', $('#quote_midsole_1').height()*-1+"px").css('left', (shoeOffsetLeft+370)+"px").css('opacity', '0');
-		$('#quote_midsole_1').animate(
-			{top: (shoeOffsetTop-25)+"px", opacity: '0.8'},
-			700,
-			function() { $('#quote_midsole_1').plaxify({"xRange":160,"yRange":90}); }
-		);
-
-		$('#quote_midsole_2').css('bottom', $('#quote_midsole_2').height()*-1+"px").css('right', ($(window).width()-shoeOffsetLeft-780)+"px").css('opacity', '0');
-		$('#quote_midsole_2').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-370)+"px", opacity: '0.3'},
-			700,
-			function() { $('#quote_midsole_2').plaxify({"xRange":190,"yRange":110}); }
-		);
-
-		$('#keyword_midsole_1').css('bottom', $('#keyword_midsole_1').height()*-1+"px").css('left', "0px").css('opacity', '0');
-		$('#keyword_midsole_1').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-500)+"px", opacity: '1'},
-			600,
-			function() { $('#keyword_midsole_1').plaxify({"xRange":200,"yRange":50}); }
-		);
-		
-		$('#midsole .line1').plaxify({"xRange":200,"yRange":100});
-		$('#midsole .line2').plaxify({"xRange":140,"yRange":50});
-		$('#midsole .line3').plaxify({"xRange":120,"yRange":40});
-		$('#midsole .line4').plaxify({"xRange":100,"yRange":30});
-		$('#midsole .line5').plaxify({"xRange":80,"yRange":20});
-		$('#midsole .line6').plaxify({"xRange":60,"yRange":10});
-		$('#midsole-bg').plaxify({"xRange":25,"yRange":25});
-		$('#midsole-shoe-shadow').plaxify({"xRange":95,"yRange":95});
-		
+function setup_midsole(){
+	if(!midsoleSetupComplete) { 
 		midsoleSetupComplete = true;	
 	} 
-	
-	show_midsole_hotspots();
 	$.plax.enable({ "activityTarget": $('#midsole')});
 }
-function reset_midsole()
-{
-	hide_midsole_hotspots();
+function reset_midsole(){
 	$.plax.disable();
 }
-function show_midsole_hotspots() {
-	$('#midsole_pop1').fadeIn('slow');
-	}
-function hide_midsole_hotspots() {
-	$('#midsole_pop1').animate({opacity: 0}, 'slow', function(){$(this).css('display', 'none').css('opacity','1')});
-}
 
 
 
-function setup_sole()
-{
-	if(!soleSetupComplete) {
-
-		
-		$('#video_sole_1').css('right', "-185px").css('top', (shoeOffsetTop+120)+"px").css('opacity', '0');
-		$('#video_sole_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-940)+"px", opacity: '1'},
-			600,
-			function() { $('#video_sole_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#video_lbl_sole_1').css('right', "-125px").css('top', (shoeOffsetTop+150)+"px").css('opacity', '0');
-		$('#video_lbl_sole_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-940)+"px", opacity: '1'},
-			600,
-			function() { $('#video_lbl_sole_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#detail_sole_1').css('right', "-185px").css('top', (shoeOffsetTop+60)+"px").css('opacity', '0');
-		$('#detail_sole_1').animate(
-			{right: ($(window).width()-shoeOffsetLeft-940)+"px", opacity: '1'},
-			600,
-			function() { $('#detail_sole_1').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#detail_lbl_sole_1').css('right', "-185px").css('top',  (shoeOffsetTop+90)+"px").css('opacity', '0');
-		$('#detail_lbl_sole_1').animate(
-			{right:  ($(window).width()-shoeOffsetLeft-900)+"px", opacity: '1'},
-			800,
-			function() { $('#detail_lbl_sole_1').plaxify({"xRange":100,"yRange":100}); }
-		);
-		
-		$('#detail_sole_2').css('left', "-185px").css('top', (shoeOffsetTop+20)+"px").css('opacity', '0');
-		$('#detail_sole_2').animate(
-			{left: '70px', opacity: '1'},
-			800,
-			function() { $('#detail_sole_2').plaxify({"xRange":60,"yRange":60}); }
-		);
-
-		$('#detail_lbl_sole_2').css('left', "-185px").css('top', (shoeOffsetTop+50)+"px").css('opacity', '0');
-		$('#detail_lbl_sole_2').animate(
-			{left: '100px', opacity: '1'},
-			600,
-			function() { $('#detail_lbl_sole_2').plaxify({"xRange":100,"yRange":100}); }
-		);
-	
-
-		$('#quote_sole_1').css('bottom', $('#quote_sole_1').height()*-1+"px").css('left', (shoeOffsetLeft+520)+"px").css('opacity', '0');
-		$('#quote_sole_1').animate(
-			{bottom: ($(window).height()-shoeOffsetTop-500)+"px", opacity: '0.8'},
-			500,
-			function() { $('#quote_sole_1').plaxify({"xRange":200,"yRange":140}); }
-		);
-		
-		$('#quote_sole_2').css('top', $('#quote_sole_2').height()*-1+"px").css('left', (shoeOffsetLeft+140)+"px").css('opacity', '0');
-		$('#quote_sole_2').animate(
-			{top: (shoeOffsetTop-60)+"px", opacity: '0.4'},
-			400,
-			function() { $('#quote_sole_2').plaxify({"xRange":60,"yRange":20}); }
-		);
-		
-		$('#sole .line1').plaxify({"xRange":200,"yRange":100});
-		$('#sole .line2').plaxify({"xRange":140,"yRange":50});
-		$('#sole .line3').plaxify({"xRange":120,"yRange":40});
-		$('#sole .line4').plaxify({"xRange":100,"yRange":30});
-		$('#sole .line5').plaxify({"xRange":80,"yRange":20});
-		$('#sole .line6').plaxify({"xRange":60,"yRange":10});
-		$('#sole-bg').plaxify({"xRange":25,"yRange":25});
-		$('#sole-shoe-shadow').plaxify({"xRange":95,"yRange":95});
-		
+function setup_sole(){
+	if(!soleSetupComplete) { 
 		soleSetupComplete = true;
 	}
-
-	if(scrollDirection == 'up') show_sole_hotspots();
+	
 	$.plax.enable({ "activityTarget": $('#sole')});
 }
-function reset_sole()
-{
+function reset_sole(){
 	hide_sole_hotspots('slow');
 	$.plax.disable();
 }
@@ -1207,9 +798,10 @@ function animationStepBackward() {
 
 
 
-function setup_shoeBrowser()
-{
+function setup_shoeBrowser(){
 	if( !shoeBrowserSetupComplete ) {
+
+        /*
 		$('#genderNav').animate({'left':(documentGutterWidth+50)+"px"}, 250 );
 		scroll_shoeBrowser();
 
@@ -1221,14 +813,15 @@ function setup_shoeBrowser()
 		
 		// Set Shop Now Link
 		$('p#shopNowLink').html('<a href="'+mens_urls[0]+'" target="_blank">SHOP NOW</a>');
-		
+		*/
 		shoeBrowserSetupComplete = true;
 	}
 }
 function reset_shoeBrowser(){}
 
 function scroll_shoeBrowser() {
-	animateSelector();
+    /*
+	//animateSelector();
 	$('#shoe_scroller div.shoe_container').addClass('hidden');
 	
 	$('#'+(shoeBrowserGender=='m'?'men':'women')+'-scroll-'+colorBrowserCurrentItem).removeClass('hidden');
@@ -1253,6 +846,7 @@ function scroll_shoeBrowser() {
 	$('#zebra_stripe .color_b').fadeOut('fast', function(){
 		$('#zebra_stripe .color_b').css('background-color',newColor).show();
 	});
+    */
 }
 
 
