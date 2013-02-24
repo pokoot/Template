@@ -141,7 +141,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 /* limit content to certain viewport */
 .wrap { 
-    width: 1100px; 
+    width: 1000px; 
     margin:0px auto; 
     text-align:left; 
     position: relative; 
@@ -150,12 +150,10 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 
 #top-nav {
-	position: absolute;
 	width: 100%;
 	height: 60px;	
     background-color: #313131;
-	text-align: center;
-	top: 0; left: 0;
+	text-align: center;	
 	z-index:10;
 	-moz-transition: top 250ms ease-in-out;
 	-webkit-transition: top 250ms ease-in-out;
@@ -182,7 +180,8 @@ body { background: #2a2a2a; overflow-x: hidden; }
 #start_screen {
 	position: relative;
 	background: green;
-	padding: 0; margin: 0;
+	padding: 0;
+    margin: 0;
 	outline: 0;
 	width: 100%;
 	height: 100%;
@@ -191,12 +190,13 @@ body { background: #2a2a2a; overflow-x: hidden; }
  
 
  
-#startBtn, .downBtn { 
+#start_button, .downBtn { 
+    cursor: pointer;
 	position: absolute;
 	z-index: 5;
 	display: block;
 	left: 50%;
-	bottom: 0px;
+	bottom: 5%;
 	margin-left: -25px;
 	-moz-transition: bottom 250ms ease-in-out;
 	-webkit-transition: bottom 250ms ease-in-out;
@@ -204,7 +204,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 .downBtn { display: block; z-index: 999999; height: 55px; }
 
-#startBtn button, .downBtn button {
+#start_button button, .downBtn button {
 	border-top-left-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
 	-moz-border-top-right-radius: 5px;
@@ -212,7 +212,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	-webkit-border-top-right-radius: 5px;
 	-moz-border-top-right-radius: 5px;
 }
-
+/*
 .btnScrollStart, .btnScrollVert, .btnScrollTop {
 	cursor: pointer;
 	border: 0px;
@@ -243,6 +243,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	-webkit-transition: background-color .25s linear;
 	transition: background-color .25s linear;
 }
+    */
 
 .btnScrollVert:hover {
 	background: rgb(255,255,255);
@@ -257,8 +258,9 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 
 
-
+/*
 .btnScrollStart, .btnScrollTop { padding: 10px; }
+*/
 .btnScrollVert { padding: 15px 10px; }
 .btnScrollVert .arrow {
 	width: 36px;

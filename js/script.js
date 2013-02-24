@@ -147,8 +147,9 @@ $(document).ready(function() {
 	/****************************************************************************************
 	  Button Click / Hover Actions
 	 ***************************************************************************************/	
-	$('#startBtn').click(function(){
-		$('#startBtn').addClass('offscreen');
+	$('#start_button').click(function(){
+        alert( "start button" );
+		$('#start_button').addClass('offscreen');
 		scrollReady = true;
 		currentScreen = 0;
 		scrollNext();
@@ -379,7 +380,7 @@ $(document).ready(function() {
 		{
 			// Show Hidden Elements
 			
-			$('#startBtn').show();
+			$('#start_button').show();
 			$('#contentWrap').show();
 			$('#shoeBrowser').show();
 			if($('#getYours').length > 0 ) $('#getYours').show();
