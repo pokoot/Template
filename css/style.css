@@ -123,19 +123,50 @@ td { vertical-align: top; }
 }
 
 
+
+
+
+
+
+
 /**
  * Start of css 
  */
 
 
-.parallax-viewport {
-    position: relative;     /* relative, absolute, fixed */
-    overflow: hidden;
+@font-face {
+        font-family: "myriad-pro-italic";
+        font-style: normal;
+        src: url(../fonts/MyriadPro-It.eot); /*if IE */
+        src: local("Grandesign Regular"), url("../fonts/MyriadPro-It.otf") format("truetype"); /* non-IE */
 }
-.parallax-layer {
-    position: absolute;
+@font-face {
+        font-family: "myriad-pro-regular";
+        font-style: normal;
+        src: url(../fonts/MyriadPro-It.eot); /*if IE */
+        src: local("Grandesign Regular"), url("../fonts/MyriadPro-Regular.otf") format("truetype"); /* non-IE */
+}
+@font-face {
+        font-family: "myriad-pro-bold";
+        font-style: normal;
+        src: url(../fonts/MyriadPro-It.eot); /*if IE */
+        src: local("Grandesign Regular"), url("../fonts/MyriadPro-Bold.otf") format("truetype"); /* non-IE */
+}
+@font-face {
+        font-family: "interstate-regular";
+        font-style: normal;
+        src: url(../fonts/interstate.eot); /*if IE */
+        src: local("Grandesign Regular"), url("../fonts/Interstate-Regular.ttf") format("truetype"); /* non-IE */
+}
+@font-face {
+        font-family: "interstate-bold";
+        font-style: normal;
+        src: url(../fonts/interstate.eot); /*if IE */
+        src: local("Grandesign Regular"), url("../fonts/Interstate-Bold.ttf") format("truetype"); /* non-IE */
 }
 
+
+ 
 body { background: #2a2a2a; overflow-x: hidden; }
 
 
@@ -243,7 +274,10 @@ body { background: #2a2a2a; overflow-x: hidden; }
 #start_screen .blurb {
     margin-top:100px;
     text-align:center;
-    background-color:#FFFFFF;
+ 
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight:bold;
 }
 
 
@@ -414,8 +448,8 @@ body { background: #2a2a2a; overflow-x: hidden; }
 .glow_green { background: url('../images/glow-green.png') no-repeat; }
 
 
-#contentWrap { display: none; }
-	#contentWrap section {
+#content_wrap { display: none; }
+	#content_wrap section {
 		position:relative;
 		overflow:hidden;
 		margin: 0;
@@ -425,10 +459,10 @@ body { background: #2a2a2a; overflow-x: hidden; }
 #global_nav {
 	position: fixed;
 	right: 0;
-	top: 15%;
+	top: 10%;
 	height: 140px;
 	width: 129px;
-	background: #68e449;
+	background: #202020;
 	font-size: 1em;
 	z-index: 10000;
 	transition: right 250ms ease-in-out;
@@ -455,7 +489,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 #global_nav ul li {
 	list-style-type: none;
-	font: bold 0.875em/0.75em "Interstate";
+	font: bold 0.875em/0.75em "interstate-regular";
 	letter-spacing: -0.08em;
 	padding: 0 0 6px 0;
 	text-transform: uppercase;
@@ -467,17 +501,17 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	-webkit-transition: color 250ms ease-in-out; 
 }
 #global_nav ul li a:hover, #global_nav ul li a.current {
-	color: #356825;
+	color: #13B4FF;
 	transition-duration: 250ms;
 	-webkit-transition-duration: 250ms;
 }
 
 
-#contentWrap section {
+#content_wrap section {
 	position: relative;
 }
 
-#contentWrap section h1 {
+#content_wrap section h1 {
 	font: 5.9em/0.8em "Interstate Black";
 	letter-spacing: -0.05em;
 	color: #fff;
@@ -586,7 +620,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 .line5 { width: 50%; height: 1px; opacity: 0.12; top: 50%; left: 25%; filter: alpha(opacity=12); }
 
 
-
+/*
 .quote {
 	position: absolute;
 	width: 300px;
@@ -609,7 +643,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 .quote5_1 { color: #9a9a9a; font-size: 0.938em; line-height: 1.200em; }
 .quote5_2 { color: #666666; font-size: 0.750em; line-height: 1.167em; }
-
+*/
 .keyword {
 	font-family: "Interstate Black";
 	font-weight: normal;
@@ -623,6 +657,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 .keyword4_1 { color: #a4a4a4; font-size: 14.063em; 	z-index: 200; line-height: .7em; }
 .keyword .note { font: 0.09em/2em Helvetica, Arial; font-weight: bold; padding-left: 40%; letter-spacing: normal; }
 
+/*
 
 .vidWrap, .detailWrap {
 	position: absolute;
@@ -689,7 +724,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 #video_sole_btn_hover { background: url('../images/block-backgrounds.png') no-repeat -1656px 0; }
 #detail_sole_2_btn { background: url('../images/block-backgrounds.png') no-repeat -1472px -368px; }
 #detail_sole_2_btn_hover { background: url('../images/block-backgrounds.png') no-repeat -1656px -368px; }
-
+*/
 
 #shoeBrowser { background: #dddddd; position: relative; overflow: hidden; display: none; }
 
