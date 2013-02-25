@@ -113,12 +113,12 @@ $(document).ready(function() {
 		scroll_next();
 	});
 	
-	$('#downBtnFlexfilm').click(function(){	current_screen = 1; scroll_next(); });
-	$('#downBtnUpper').click(function(){	current_screen = 2; scroll_next(); });
-	$('#downBtnProgrid').click(function(){	current_screen = 3; scroll_next(); });
-	$('#downBtnMidsole').click(function(){	current_screen = 4; scroll_next(); });
-	$('#downBtnSole').click(function(){		current_screen = 5; scroll_next(); });
-	$('#downBtnBrowser').click(function(){	current_screen = 6; scroll_next(); });
+	$('#down_one').click(function(){	current_screen = 1; scroll_next(); });
+	$('#down_two').click(function(){	current_screen = 2; scroll_next(); });
+	$('#down_three').click(function(){	current_screen = 3; scroll_next(); });
+	$('#down_four').click(function(){	current_screen = 4; scroll_next(); });
+	$('#down_five').click(function(){	current_screen = 5; scroll_next(); });
+	$('#down_six').click(function(){    current_screen = 6; scroll_next(); });
 	
 	$('#scroll_top').click(function(){
 		scroll_ready = false;
