@@ -9,13 +9,13 @@ var document_gutter_width = (($(document).width() - document_wrap_width) / 2);
 var screen_animation_time = 1000;
 var screens = new Array( 
                 'start_screen',
-				'flexfilm',
-				'upper',
-				'progrid',
-				'midsole',
-				'sole',
-				'shoeBrowser',
-				'getYours' );
+				'template_one',
+				'template_two',
+				'template_three',
+				'template_four',
+				'template_five',
+				'template_six',
+				'contact' );
 						
 
 $(document).ready(function() {
@@ -27,7 +27,6 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 
 		var wintop = $(window).scrollTop(), doc_height = $(document).height(), window_height = $(window).height();
-        
 		
 		// Save which direction we are going to a global
 		if( last_scroll_top >= wintop ) scroll_direction = 'up';
@@ -43,34 +42,35 @@ $(document).ready(function() {
 		
 		// Current Navigation Item Highlight Indication
 		if( wintop <= window_height*1.5 ) {
-			$('#nav_flexfilm a').addClass('current');
-		} else $('#nav_flexfilm a').removeClass('current');
+			$('#nav_one a').addClass('current');
+		} else $('#nav_one a').removeClass('current');
 
 		if( wintop > window_height*1.5 && wintop <= window_height*2.5 ) {
-			if(!$('#nav_upper a').hasClass('current')) $('#nav_upper a').addClass('current');
-		} else $('#nav_upper a').removeClass('current');
+			if(!$('#nav_two a').hasClass('current')) $('#nav_two a').addClass('current');
+		} else $('#nav_two a').removeClass('current');
 
 		if( wintop > window_height*2.5 && wintop <= window_height*3.5 ) {
-			if(!$('#nav_progrid a').hasClass('current')) $('#nav_progrid a').addClass('current');
-		} else $('#nav_progrid a').removeClass('current');
+			if(!$('#nav_three a').hasClass('current')) $('#nav_three a').addClass('current');
+		} else $('#nav_three a').removeClass('current');
 
 		if( wintop > window_height*3.5 && wintop <= window_height*4.5 ) {
-			if(!$('#nav_midsole a').hasClass('current')) $('#nav_midsole a').addClass('current');
-		} else $('#nav_midsole a').removeClass('current');
+			if(!$('#nav_four a').hasClass('current')) $('#nav_four a').addClass('current');
+		} else $('#nav_four a').removeClass('current');
 
 		if( wintop > window_height*4.5 && wintop <= window_height*5.5 ) {            
-			if(!$('#nav_sole a').hasClass('current')) $('#nav_sole a').addClass('current');
-		} else $('#nav_sole a').removeClass('current');
+			if(!$('#nav_five a').hasClass('current')) $('#nav_five a').addClass('current');
+		} else $('#nav_five a').removeClass('current');
 
 		if( wintop > window_height*5.5 && wintop <= window_height*6.5 ) {             
-			if(!$('#nav_colors a').hasClass('current')) $('#nav_colors a').addClass('current');
-		} else $('#nav_colors a').removeClass('current');
+			if(!$('#nav_six a').hasClass('current')) $('#nav_six a').addClass('current');
+		} else $('#nav_six a').removeClass('current');
 		
 		// Records last scroll top for acertaining direction
 		last_scroll_top = wintop;
 				
 		// Prevent scrolling when scroller is not ready 
 		if(scroll_locked) prevent_scroll();
+
 	});
 	
 	
@@ -131,13 +131,13 @@ $(document).ready(function() {
 	});
 
 	// Nav Click Events
-	$('#nav_flexfilm a').click(function(event){ event.preventDefault(); current_screen = 1; perform_scroll(); });
-	$('#nav_upper a').click(function(event){ event.preventDefault(); current_screen = 2; perform_scroll(); });
-	$('#nav_progrid a').click(function(event){ event.preventDefault(); current_screen = 3; perform_scroll(); });
-	$('#nav_midsole a').click(function(event){ event.preventDefault(); current_screen = 4; perform_scroll(); });
-	$('#nav_sole a').click(function(event){ event.preventDefault(); current_screen = 5; perform_scroll(); });
-	$('#nav_colors a').click(function(event){ event.preventDefault(); current_screen = 6; perform_scroll(); });
-	$('#nav_getyours a').click(function(event){ event.preventDefault(); current_screen = 7; perform_scroll(); });
+	$('#nav_one a').click(function(event){ event.preventDefault(); current_screen = 1; perform_scroll(); });
+	$('#nav_two a').click(function(event){ event.preventDefault(); current_screen = 2; perform_scroll(); });
+	$('#nav_three a').click(function(event){ event.preventDefault(); current_screen = 3; perform_scroll(); });
+	$('#nav_four a').click(function(event){ event.preventDefault(); current_screen = 4; perform_scroll(); });
+	$('#nav_five a').click(function(event){ event.preventDefault(); current_screen = 5; perform_scroll(); });
+	$('#nav_six a').click(function(event){ event.preventDefault(); current_screen = 6; perform_scroll(); });
+	$('#nav_contact a').click(function(event){ event.preventDefault(); current_screen = 7; perform_scroll(); });
  
 
 
