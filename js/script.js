@@ -160,7 +160,7 @@ $(document).ready(function() {
  
     });
 
-	 screens[7] = 'comingSoon';
+	 screens[7] = 'contact';
 
 	
 });
@@ -178,7 +178,7 @@ function size_to_window() {
 
 	$('#start_screen').height(screen_height);
 	
-	$('#comingSoon .wrap').css('min-height',screen_height+"px");
+	$('#contact .wrap').css('min-height',screen_height+"px");
 	$('#content_wrap section').height(screen_height).width($(window).width());
 }
 

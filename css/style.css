@@ -190,7 +190,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 
 #start_screen .border {
-    height: 10px; 
+    height: 6px; 
     background-color:#313131;
 }
 
@@ -305,8 +305,6 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	margin-left: 0px;
 	-moz-transition: bottom 250ms ease-in-out;
 	-webkit-transition: bottom 250ms ease-in-out;
-    
-
 }
 .down_button { 
     display: block; 
@@ -315,6 +313,19 @@ body { background: #2a2a2a; overflow-x: hidden; }
     width: 30px;
     background-color:yellow;
     background: url('../images/down.png') no-repeat 0 0;
+}
+
+.up_button { 
+    cursor: pointer;
+	position: absolute;
+	left: 50%;
+	top: 4%;
+    z-index: 999999; 
+    height: 30px; 
+    width: 30px;
+    background: url('../images/down.png') no-repeat 0 0;
+    -webkit-transform: rotate(-180deg); 
+    -moz-transform: rotate(-180deg); 
 }
 
  
@@ -518,20 +529,19 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 
 /* Thanks Screen */
-#thanks, #comingSoon {
+#thanks, #contact {
 	background-color: #1c1918;
 	background: url('../images/start_screen-bg.jpg') repeat top center, url('../images/thanks-bg-grad.png') repeat-x top left;
 	position: relative;
 }
-#comingSoon { display:none; }
+#contact { display:none; }
 #thanks h1 {
 	font: normal 5.693em/0.85em"Interstate Black";
 	color: #fff;
 	letter-spacing: -0.02em;
-	padding-left: 75px;
-	padding-top:115px;
+ 
 }
-#comingSoon h1 {
+#contact h1 {
 	font: 7.69em/0.82em "Interstate Black";
 	color: #fff;
 	letter-spacing: -0.04em;
@@ -540,8 +550,8 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	margin-bottom: 20px;
 }
 
-#thanks h1 span, #comingSoon h1 span { color: #83cd00; }
-#thanks p, #comingSoon p {
+#thanks h1 span, #contact h1 span { color: #83cd00; }
+#thanks p, #contact p {
 	color: #a5a5a5;
 	font: bold 1em Interstate;
 	letter-spacing: -1px;
@@ -553,19 +563,19 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	-webkit-text-shadow: 0px -1px -1px #000;
 	width: 695px;
 }
-#comingSoon p {
+#contact p {
 	color: #818181; 
 	margin: 16px 0 13px;
 	width: auto;
 }
 
-#comingSoon .left {
+#contact .left {
 	float: left; 
 	width: 350px;
 }
 
-#thanks a, #comingSoon a { color: #d41010; text-decoration: none; }
-#thanks a:hover, #comingSoon a:hover { color: #fff; }
+#thanks a, #contact a { color: #d41010; text-decoration: none; }
+#thanks a:hover, #contact a:hover { color: #fff; }
 
 #email_form {
 	padding: 0 0 0 75px;
@@ -614,7 +624,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	background-position: left -30px;
 }
 
-#comingSoon .fb-like {
+#contact .fb-like {
 	height: 60px;
 }
 
@@ -657,48 +667,30 @@ a#visit_facebook {
 		background: url("../images/bg-visit_saucony.png") 75px -27px no-repeat;
 	}
 
-#comingSoon .fb-like {
+#contact .fb-like {
 	padding: 0 0 0 75px !important;
 	display: block;
 }
 
-#comingSoon images.wallpaperPreview {
+#contact images.wallpaperPreview {
 	margin: 28px 0 0 75px;
 }
 
-#comingSoon  ul.wallpapers { list-style-type: none; }
-	#comingSoon  ul.wallpapers a {
-		font: bold 1em Interstate;
-		letter-spacing: -0.01em;
-		padding: 0 0 0 47px;
-		background: url("../images/bg-visit_saucony.png") 35px 1px no-repeat;
-		text-transform: uppercase;
-	}
-	
-	#comingSoon  ul.wallpapers a:hover {
-		background-position:  35px -27px;
-	}
-
-
-
-
-/* Footer Bar */
-.footer {
-	position: absolute;
-	z-index: 10;
-	text-align:left;
-	background: url('../images/footer-div.jpg') repeat-x top left;
-	width: 950px;
-	top: 720px;
-	left: 50%;
-	margin-left: -475px;
-	padding-top: 21px;
-	font: 0.750em Helvetica, Arial, sans-serif;
-	color: #565f67;
+#contact  ul.wallpapers { list-style-type: none; }
+#contact  ul.wallpapers a {
+    font: bold 1em Interstate;
+    letter-spacing: -0.01em;
+    padding: 0 0 0 47px;
+    background: url("../images/bg-visit_saucony.png") 35px 1px no-repeat;
+    text-transform: uppercase;
 }
-.footer a { color: #d41010; text-decoration: none; }
-.footer a:hover { color: #fff; }
 
+#contact  ul.wallpapers a:hover {
+    background-position:  35px -27px;
+}
+
+
+ 
 
 
 /* Scroll Up Btn */
@@ -712,118 +704,4 @@ a#visit_facebook {
 	-moz-transition: bottom 250ms ease-in-out;
 	-webkit-transition: bottom 250ms ease-in-out;
 }
-
-#scrollUpBtn button {
-	border-bottom-left-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-bottom-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-bottom-right-radius: 5px;
-}
-
-
-
-
-
-
-/* =============================================================================
-   ColorBox
-   ========================================================================== */
-#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:99999; overflow:hidden;}
-#cboxOverlay{position:fixed; width:100%; height:100%;}
-#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
-#cboxContent{position:relative;}
-#cboxLoadedContent{overflow:auto;}
-#cboxTitle{margin:0;}
-#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
-.cboxPhoto{float:left; margin:auto; border:0; display:block;}
-.cboxIframe{width:100%; height:293px; display:block; border:0;}
-
-#cboxOverlay{background:url('../images/colorbox-overlay.png') repeat 0 0;}
-#colorbox{}
-    #cboxTopLeft{width:0; height:0}
-    #cboxTopCenter{height:0;}
-    #cboxTopRight{width:0; height:0;}
-    #cboxBottomLeft{width:0; height:0;}
-    #cboxBottomCenter{height:0; }
-    #cboxBottomRight{width:0; height:0;}
-    #cboxMiddleLeft{width:0;}
-    #cboxMiddleRight{width:0;}
-    #cboxContent{background-color: #fff; overflow:hidden;}
-		#cboxContent images { margin-top: 0 !important; }
-        .cboxIframe{background:#fff;}
-        #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{margin-bottom:0px;}
-        #cboxTitle{
-			background-color: #000;
-			position:absolute;
-			bottom:0px;
-			left:0;
-			text-align:left;
-			height:48px;
-			width:100%;
-			color:#fff;
-			font-size: 0.875em;
-			padding: 20px 0 0 20px;
-		}
-        #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999;}
-        #cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
-        #cboxPrevious{position:absolute; bottom:0px; left:0; color:#444;}
-        #cboxNext{position:absolute; bottom:0px; left:63px; color:#444;}
-        #cboxLoadingOverlay{background:#fff url(../images/colorbox-loading.gif) no-repeat 5px 5px;}
-        #cboxClose{
-			position:absolute;
-			bottom:20px; right:20px;
-			width: 25px; height: 25px;
-			display:block;
-			background: url('../images/colorbox-close-btn.png') no-repeat 0 0;
-			color:#fff;
-			text-indent: -999999px;
-		}
-		#cboxClose:hover { background-position: -25px 0; }
-
-/*
-  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
-  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
-  See: http://jacklmoore.com/notes/ie-transparency-problems/
-*/
-.cboxIE #cboxTopLeft,
-.cboxIE #cboxTopCenter,
-.cboxIE #cboxTopRight,
-.cboxIE #cboxBottomLeft,
-.cboxIE #cboxBottomCenter,
-.cboxIE #cboxBottomRight,
-.cboxIE #cboxMiddleLeft,
-.cboxIE #cboxMiddleRight {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
-}
-
-
-
-
-/* ==|== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
-
-/* For image replacement */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
-.ir br { display: none; }
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/* Contain floats: h5bp.com/q */
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; } 
+ 
