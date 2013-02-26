@@ -1,9 +1,4 @@
 /**
- * Author: Harold Kim 
- */
-
-
-/**
  * HTML5 display definitions 
  */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
@@ -104,35 +99,11 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
-
-
-
-/**
- * Chrome Frame prompt 
- */
-
-.chromeframe {
-	margin: 0;
-	background: #202020 url('../images/start_screen-bg.jpg') repeat top center;
-	color: #fff;
-	padding: 25px;
-}
-
-.chromeframe a, .chromeframe a:visited {
-	color: #D41010;
-}
-
-
-
-
-
-
-
+ 
 
 /**
  * Start of css 
  */
-
 
 @font-face {
         font-family: "myriad-pro-italic";
@@ -213,16 +184,12 @@ body { background: #2a2a2a; overflow-x: hidden; }
  
 
 #start_screen ul {
-   
     list-style: none;
     margin: 0;
     margin-left: 220px;
     background-color: blue;
     text-align: center;
 }
-
-
-
 
 #start_screen li {
     height: 64px;
@@ -269,30 +236,13 @@ body { background: #2a2a2a; overflow-x: hidden; }
     padding-top:38px; 
 }
 
-
-
 #start_screen .blurb {
     margin-top:100px;
     text-align:center;
- 
     color: #FFFFFF;
     font-size: 40px;
     font-weight:bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  
 #start_button, .down_button { 
@@ -306,6 +256,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	-moz-transition: bottom 250ms ease-in-out;
 	-webkit-transition: bottom 250ms ease-in-out;
 }
+
 .down_button { 
     display: block; 
     z-index: 999999; 
@@ -329,88 +280,44 @@ body { background: #2a2a2a; overflow-x: hidden; }
 }
 
  
-
-/*
-.btnScrollStart, .btnScrollTop { padding: 10px; }
-*/
-.btnScrollVert { padding: 15px 10px; }
-.btnScrollVert .arrow {
-	width: 36px;
-	height: 24px;
-	background: url('../images/arrow-down.png') no-repeat 0 0;
-}
-.btnScrollVert:hover .arrow {
-	background-position: 0 -24px;
-}
-
-/* Start Sceen Social */
-#social { text-align:right; padding-right: 72px; padding-top: 24px; }
-#social button { cursor: pointer; margin-left: 3px; }
-#social button.socialFacebook {
-	border: 0px; outline: 0px;
-	background: url(../images/social-icons.png) no-repeat 0 0;
-	width: 36px; height: 35px;
-	text-indent: -99999px;
-}
-#social button.socialFacebook:hover { background-position: 0 -35px; }
-#social button.socialTwitter {
-	border: 0px; outline: 0px;
-	background: url(../images/social-icons.png) no-repeat -36px 0;
-	width: 36px; height: 35px;
-	text-indent: -99999px;
-}
-#social button.socialTwitter:hover { background-position: -36px -35px; }
-
  
-
-#intro {
-	color: #8d8d8d;
-	font: 0.813em/1.3em Helvetica;
-	width: 740px;
-	margin-left: 52px;
-	margin-bottom: 20px;
-	font-weight: bold;
-}
-#usbStrap {
-	background: url(../images/startPage-usb-strap.png) no-repeat;
-	width: 1000px; height: 142px;
-}
-#usbStrap h2 {
-	font-family: "Interstate Black";
-	font-size: 1.559em;
-	color: #fff;
-	font-weight: normal;
-	letter-spacing: -0.01em;
-	padding: 26px 0 0 390px;
-}
-
-#start_screen #startShoes {
-	position: absolute;
-	z-index: 5;
-	display: block;
-	right: 0;
-	bottom: 0;
-	margin-left: 85px;
-}
-
-
- 
-.glow {
-	width: 1600px;
-	height: 1050px;
-	position: absolute;	
-}
-
-.glow_green { background: url('../images/glow-green.png') no-repeat; }
-
 
 #content_wrap { display: none; }
-	#content_wrap section {
-		position:relative;
-		overflow:hidden;
-		margin: 0;
-		padding: 0;
-	}
+#content_wrap section {
+    text-align:center;
+    position:relative;
+	overflow:hidden;
+	margin: 0;
+    padding: 0;
+    height: 663px; 
+    width: 1899px; 
+    
+}
+
+/*
+ * Centering 
+ * http://css-tricks.com/centering-in-the-unknown/  
+ */
+#content_wrap section:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; 
+ }
+ 
+#content_wrap .centered {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    margin-top:-60px;
+}
+#content_wrap .centered h1 {
+    font-size:60px;
+}
+#content_wrap .centered p {
+    font-size: 18px
+}
 
 #global_nav {
 	position: fixed;
@@ -461,86 +368,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	transition-duration: 250ms;
 	-webkit-transition-duration: 250ms;
 }
-
-
-#content_wrap section {
-	position: relative;
-}
-
-#content_wrap section h1 {
-	font: 5.9em/0.8em "Interstate Black";
-	letter-spacing: -0.05em;
-	color: #fff;
-	position: absolute;
-	display: block;
-	margin:0; padding:0;
-	z-index: 2000;
-}
- 
-
-
-
- 
-
-.field_submit { padding-top: 22px; }
-.field_submit #get_submit {
-	color: #fff;
-	font-size: 1em;
-	font-family: Interstate;
-	border: 0px;
-	background: #d41010 url('../images/submit-bg-off.jpg') repeat-x;
-	width: 184px;
-	height: 41px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	text-shadow: 0px -1px -1px #e12222;
-	-moz-text-shadow: 0px -1px -1px #e12222;
-	-webkit-text-shadow: 0px -1px -1px #e12222;
-	float: left;
-}
-.field_submit #get_submit:hover {
-	color: #d41010;
-	background: #c9c9c9 url('../images/submit-bg-on.jpg') repeat-x;
-	text-shadow: 0px -1px -1px #e7b6b6;
-	-moz-text-shadow: 0px -1px -1px #e7b6b6;
-	-webkit-text-shadow: 0px -1px -1px #e7b6b6;
-}
-#submitErrors {
-	display: hidden;
-	padding-left: 50px;
-	color: #D41010 !important;
-	font-style: italic;
-	font-weight: bold;
-	float: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Thanks Screen */
-#thanks, #contact {
-	background-color: #1c1918;
-	background: url('../images/start_screen-bg.jpg') repeat top center, url('../images/thanks-bg-grad.png') repeat-x top left;
-	position: relative;
-}
-#contact { display:none; }
-#thanks h1 {
-	font: normal 5.693em/0.85em"Interstate Black";
-	color: #fff;
-	letter-spacing: -0.02em;
- 
-}
+  
 #contact h1 {
 	font: 7.69em/0.82em "Interstate Black";
 	color: #fff;
@@ -548,160 +376,34 @@ body { background: #2a2a2a; overflow-x: hidden; }
 	padding-left: 75px;
 	padding-top:115px;
 	margin-bottom: 20px;
-}
+} 
 
-#thanks h1 span, #contact h1 span { color: #83cd00; }
-#thanks p, #contact p {
-	color: #a5a5a5;
-	font: bold 1em Interstate;
-	letter-spacing: -1px;
-	padding: 10px 0 0 75px;
-	line-height:1.25em;
-	text-transform:uppercase;
-	text-shadow: 0px -1px -1px #000;
-	-moz-text-shadow: 0px -1px -1px #000;
-	-webkit-text-shadow: 0px -1px -1px #000;
-	width: 695px;
+div.parent {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
 }
-#contact p {
-	color: #818181; 
-	margin: 16px 0 13px;
-	width: auto;
-}
-
-#contact .left {
-	float: left; 
-	width: 350px;
-}
-
-#thanks a, #contact a { color: #d41010; text-decoration: none; }
-#thanks a:hover, #contact a:hover { color: #fff; }
-
-#email_form {
-	padding: 0 0 0 75px;
-	height: 60px;
-}
-
-#email_entry {
-    background-image: url("../images/subscribe-email-bg.png");
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-color: transparent;
-    border: 0 none;
-    color: #565F67;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 11px;
-    height: 20px;
-    margin-top: 1px;
-    outline: medium none;
-    padding: 0 7px 9px;
-    width: 147px;
-		float: left;
-}
-
-#email_submit {
-	background-image: url('../images/subscribe-email-button.png');
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-color: transparent;
-	width: 37px;
-	height: 22px;
-    border: 0 none;
-    cursor: pointer;
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    margin-top: 1px;
-    text-indent: -9999px;
-	float: left;
-}
-
-#email_entry:focus {
-	background-position: left -30px;
-}
-
-#email_submit:hover, #email_submit:active {
-	background-position: left -30px;
-}
-
-#contact .fb-like {
-	height: 60px;
+div.parent div.absolute {
+    position: absolute;
+    top: 50%;
+    height: 300px;
+    width: 300px;
+    background-color:pink;
 }
 
 
-a#visit_saucony {
-	color: #D41010;
-    display: block;
-    font-family: Interstate;
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin-right: 15px;
-    margin-top: 0;
-    padding: 0 0 0 87px;
-    text-shadow: 0 -1px 1px #000000;
-    text-transform: uppercase;
-	background: url("../images/bg-visit_saucony.png") 75px 3px no-repeat;
-}
-
-	a#visit_saucony:hover, a#visit_saucony:active {
-		background: url("../images/bg-visit_saucony.png") 75px -27px no-repeat;
-	}
-
-a#visit_facebook {
-	color: #D41010;
-    display: block;
-    font-family: Interstate;
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin-right: 15px;
-    margin-top: 0;
-    padding: 0 0 0 87px;
-    text-shadow: 0 -1px 1px #000000;
-    text-transform: uppercase;
-	background: url("../images/bg-visit_saucony.png") 75px 3px no-repeat;
-}
-
-	a#visit_facebook:hover, a#visit_facebook:active {
-		background: url("../images/bg-visit_saucony.png") 75px -27px no-repeat;
-	}
-
-#contact .fb-like {
-	padding: 0 0 0 75px !important;
-	display: block;
-}
-
-#contact images.wallpaperPreview {
-	margin: 28px 0 0 75px;
-}
-
-#contact  ul.wallpapers { list-style-type: none; }
-#contact  ul.wallpapers a {
-    font: bold 1em Interstate;
-    letter-spacing: -0.01em;
-    padding: 0 0 0 47px;
-    background: url("../images/bg-visit_saucony.png") 35px 1px no-repeat;
-    text-transform: uppercase;
-}
-
-#contact  ul.wallpapers a:hover {
-    background-position:  35px -27px;
-}
 
 
- 
 
 
-/* Scroll Up Btn */
-#scrollUpBtn { 
-	position: absolute;
-	z-index: 5;
-	display: block;
-	left: 50%;
-	top: 0px;
-	margin-left: -25px;
-	-moz-transition: bottom 250ms ease-in-out;
-	-webkit-transition: bottom 250ms ease-in-out;
-}
- 
+
+
+
+
+
+
+
+
+
+
