@@ -1,22 +1,21 @@
-var MIN_HEIGHT = 600;
-var current_screen = 0;
-var scroll_ready = false;
-var scroll_locked = false;
-var scroll_direction = 'down';
-var screen_height = $(window).height() > MIN_HEIGHT ? $(window).height() : MIN_HEIGHT;
-var document_wrap_width = 1100;
-var document_gutter_width = (($(document).width() - document_wrap_width) / 2);
-var screen_animation_time = 1000;
-var screens = new Array( 
-                'start_screen',
-				'template_one',
-				'template_two',
-				'template_three',
-				'template_four',
-				'template_five',
-				'template_six',
-				'contact' );
-						
+var MIN_HEIGHT              = 600;
+var current_screen          = 0;
+var scroll_ready            = false;
+var scroll_locked           = false;
+var scroll_direction        = 'down';
+var screen_height           = $(window).height() > MIN_HEIGHT ? $(window).height() : MIN_HEIGHT;
+var document_wrap_width     = 1100;
+var document_gutter_width   = (($(document).width() - document_wrap_width) / 2);
+var screen_animation_time   = 1000;
+var screens = new Array(    'start_screen',
+		            		'template_one',
+                            'template_two',
+                            'template_three',
+                            'template_four',
+                            'template_five',
+                            'template_six',
+                            'contact' );
+                                    
 
 $(document).ready(function() {
 
