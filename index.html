@@ -95,16 +95,72 @@
 
         <section id="template_six">
             <div id="down_six" class="down_button"></div>
+        </section>
+
+        <section id="contact">
+
+            <div id="scroll_top" class="up_button"></div>
+
+            <div class="centered box">
+                <div class="section">
+                    <h1>My Location</h1>
+                    <img src="./images/location.png" width="300" height="300">
+                </div>
+
+                <div class="section" >
+                    <h1>Contact Form</h1>
+                    <form  action="">
+                     	<fieldset>
+                        	<label><input type="text" onblur="if(this.value==''){this.value='Name:'}" onfocus="if(this.value=='Name:'){this.value=''}" value="Name:"></label>
+                           <label><input type="text" onblur="if(this.value==''){this.value='E-mail:'}" onfocus="if(this.value=='E-mail:'){this.value=''}" value="E-mail:"></label>
+                           <label><input type="text" onblur="if(this.value==''){this.value='Subject:'}" onfocus="if(this.value=='Subject:'){this.value=''}" value="Subject:"></label>
+                           <textarea onblur="if(this.value==''){this.value='Message:'}" onfocus="if(this.value=='Message:'){this.value=''}" rows="" cols="">Message:</textarea>
+                           <div class="" style="text-align:right" ><a class="button">Send</a></div>
+                        </fieldset>
+                     </form>
+                </div>
+                <div class="section" >
+                
+ 
+                    <h1> Contact Info</h1>
+
+                    <p>
+                        Block 130 Kim Tian Road <br>
+                        #08-147<br>
+                        Singapore 160130
+                    </p>
+                    <p>
+                        <span>Telephone:</span> 84445591 <br/>
+                        <span>Email:</span> pokoot@gmail.com
+                    </p>
+                
+                
+                </div>
+
+            </div>
+
+
 		</section>
 		
 	</div>  
 
+    <!--
 	<div style="display: block;" id="contact">
-        <div style="min-height: 663px;" class="wrap">
+        <div style="min-height: 663px;background-color:pink;" class="wrap">
             <div id="scroll_top" class="up_button"></div>
-			<h1>CONTACT ME</h1>
+
+
+            <div style=" content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; " >
+                <div style="background-color:orange; height: 200px; display: inline-block;  vertical-align: middle;"  >123</div>
+            </div>
+		    
 		</div>
-	</div>
+    </div>
+    -->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/plugins.js"></script>
