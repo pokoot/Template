@@ -431,11 +431,24 @@ body { background: #2a2a2a; overflow-x: hidden; }
     margin: 15px 20px 15px 0px;
 }
 #contact .three {
+    position: relative;
     display:block;
     float:left; 
     width: 300px; 
     height: 370px;
     margin: 15px 15px 20px 0px;
+}
+
+#contact .three .message {
+    position: absolute; 
+    bottom: 20px; 
+    margin-left: 20px; 
+    padding: 5px 10px; 
+    width: 400px; 
+    font-size: 50px; 
+    font-weight: bold; 
+    color: #f0f0f0;  
+    background-color: #313131;
 }
 
 #contact .box p {
