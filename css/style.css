@@ -264,22 +264,6 @@ body { background: #2a2a2a; overflow-x: hidden; }
     margin-left: -15px;
     background: url('../images/down.png') no-repeat 0 0;
 }
-
-.up_button { 
-    cursor: pointer;
-	position: absolute;
-	left: 50%;
-	top: 4%;
-    z-index: 999999; 
-    height: 30px; 
-    width: 30px;
-    margin-left: -15px;
-    background: url('../images/down.png') no-repeat 0 0;
-    -webkit-transform: rotate(-180deg); 
-    -moz-transform: rotate(-180deg); 
-}
-
- 
  
 
 #content_wrap { display: none; }
@@ -316,7 +300,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
     font-size:60px;
 }
 #content_wrap .centered p {
-    font-size: 18px
+    font-size: 15px
 }
 
 #global_nav {
@@ -380,31 +364,87 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 
 #contact .box {
-    height: 370px;
+    height: 500px;
     width: 1000px;     
     
     text-align:left;
     padding: 0;
-    margin-top: -20px;
+    margin-top: -10%;
     background-color:#1b1b1b;
 }
 
-#contact .box div.section {
-    display:block;
-    float:left; 
-    width: 300px; 
-    height: 350px;
-    padding: 10px 15px;
 
+#contact .banner {
+    width:100%; 
+    height: 100px; 
+    background-color: #f0f0f0; 
+    position: relative;
+}
+
+#contact .banner .container-message {
+    width: 80%; 
+    height: 100px; 
+    float: left;
+}
+
+
+#contact .banner .container-message h1 {
+    font-size: 80px; 
+    margin-top: 18px; 
+    color: #1b1b1b;
+}
+
+#contact .banner .container-top {    
+    width: 20%;
+    height: 100px; 
+    float: left;
+}
+
+#contact .banner .container-top div{    
+    position: absolute; 
+    bottom: 0;
+    right: 0; 
+    color: #FFFFFF;  
+    background-color: #1b1b1b; 
+    padding: 6px 20px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 #contact .box h1 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 17px;
     margin-bottom: 15px;
 }
 
-#contact  label {
+#contact .one {
+    display:block;
+    float:left; 
+    width: 310px; 
+    height: 370px;
+    margin: 15px;
+}
+#contact .two {
+    display:block;
+    float:left; 
+    width: 320px; 
+    height: 370px;
+    margin: 15px 15px 15px 0px;
+}
+#contact .three {
+    display:block;
+    float:left; 
+    width: 310px; 
+    height: 370px;
+    margin: 15px 15px 15px 0px;
+}
+
+#contact .box p {
+    font-size: 14px;
+} 
+
+
+
+#contact label {
     display: block;
     height: 40px;
     overflow: hidden;
@@ -416,32 +456,21 @@ body { background: #2a2a2a; overflow-x: hidden; }
     border: medium none;
     color: #333333;
     padding: 6px 5px 6px 8px;
-    width: 285px;
+    width: 305px;
 }
-
  
 
 #contact textarea {
     background: none repeat scroll 0 0 #F4F4F4;
     border: medium none;
     color: #333333;
-    height: 125px;
+    height: 155px;
     margin-bottom: 15px;
     overflow: auto;
     padding: 6px 5px 6px 8px;
-    width: 285px;
+    width: 305px;
 }
 
-
-#contact .link1 {
-    color: #F4F4F4;
-    font-size: 15px;
-    padding: 0 0 0 10px;
-    text-decoration: none;
-}
-
-
- 
 
 #contact span {
     color: #999999;
@@ -454,11 +483,12 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 
 
-a.button {
+#contact a.button {
     display:inline;
-    background-color: #466287 ;
-    padding:10px;
+    background-color: #13B4FF ;
+    padding:8px 15px;
     text-align:center;
-    color: #FFFFFF;
-    font-size: 16px;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
 }
