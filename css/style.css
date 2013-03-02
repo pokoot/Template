@@ -421,21 +421,21 @@ body { background: #2a2a2a; overflow-x: hidden; }
     float:left; 
     width: 310px; 
     height: 370px;
-    margin: 15px;
+    margin: 15px 20px;
 }
 #contact .two {
     display:block;
     float:left; 
-    width: 320px; 
+    width: 310px; 
     height: 370px;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 20px 15px 0px;
 }
 #contact .three {
     display:block;
     float:left; 
-    width: 310px; 
+    width: 300px; 
     height: 370px;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 15px 20px 0px;
 }
 
 #contact .box p {
@@ -456,7 +456,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
     border: medium none;
     color: #333333;
     padding: 6px 5px 6px 8px;
-    width: 305px;
+    width: 295px;
 }
  
 
@@ -468,7 +468,7 @@ body { background: #2a2a2a; overflow-x: hidden; }
     margin-bottom: 15px;
     overflow: auto;
     padding: 6px 5px 6px 8px;
-    width: 305px;
+    width: 295px;
 }
 
 
@@ -485,10 +485,11 @@ body { background: #2a2a2a; overflow-x: hidden; }
 
 #contact a.button {
     display:inline;
-    background-color: #13B4FF ;
+    background-color: #313131 ;
     padding:8px 15px;
     text-align:center;
-    color: #000000;
+    color: #FFFFFF;
     font-size: 14px;
     cursor: pointer;
+    font-weight: bold;
 }
