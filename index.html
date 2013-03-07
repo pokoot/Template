@@ -12,9 +12,7 @@
 
     <link rel="stylesheet" href="css/anythingslider.css">
     <link rel="stylesheet" href="css/theme-minimalist-square.css">
-    	<style>
-	#slider { width: 700px; height: 390px; }
-	</style>
+     
    
 </head>
 <body>
@@ -102,25 +100,13 @@
 
         <section id="template_six" style="background-color:#FFFFFF;" >
 
-            <div class="centered" style="background-color: red;  width: 1100px; height: 500px;">
-               
+            <div class="centered" style="background-color: red;  width: 1100px; height: 550px;">
 
-
-                	<ul id="slider">
-
-                        <li>
-                            <div style="background-color: green">test green</div>
-                        </li>
-
-                        <li>
-                           <div style="background-color: blue;">test blue</div>
-                        </li>
-
-		               <li>
-                           <div style="background-color: orange;">test orange</div>
-                        </li>
-
-                    </ul>
+                <ul id="slider" style="background-color: yellow;">
+                    <li><div style=" ">test green</div></li>
+                    <li><div style="background-color: blue;">test blue</div></li>
+                    <li><div style="background-color: orange;">test orange</div></li>
+                </ul>
 
  
             </div>            
@@ -164,7 +150,6 @@
 
                 <div class="three">
 
-                  
                     <h1>Contact Info</h1>
                     <p>
                         Block 130 Kim Tian Road <br>
@@ -200,13 +185,15 @@
 
     
 
+
     	<script>
 		// DOM Ready
-		$(function(){
-            $('#slider').anythingSlider(
-            {
+        $(function(){
+            /* http://jqueryui.com/resources/demos/effect/easing.html */
+            $('#slider').anythingSlider({
 				theme           : 'minimalist-square',
-				easing          : 'easeInOutBack',
+                /* easing          : 'easeInOutBack', */
+                easing : 'easeOutSine' , 
 				navigationFormatter : function(index, panel){
 					return ['Slab', 'Parking Lot', 'Drive', 'Glorius Dawn', 'Bjork?', 'Traffic Circle'][index - 1];
 				},
