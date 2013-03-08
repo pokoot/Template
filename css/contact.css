@@ -1,6 +1,12 @@
 /**
  * Contact us 
  */
+
+
+#contact {
+    background-color: #f0f0f0;
+}
+
 #contact .box {
     height: 500px;
     width: 1000px;     
