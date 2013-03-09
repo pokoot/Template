@@ -1,0 +1,18 @@
+#works {
+    width: 1100px; 
+    height: 600px; 
+}
+
+#works .header {
+    margin-bottom: 10px;
+}
+
+#works .header h1{
+    color: #FFFFFF;
+    background-color: #1b1b1b;
+    padding: 0px 20px;
+    display: inline-block;
+    
+}
+
+
