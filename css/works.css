@@ -1,5 +1,8 @@
+#template_six {
+    background-color: #FFFFFF;
+}
 #works {
-    width: 1050px; 
+    width: 1100px; 
 }
 
 #works .header {
@@ -11,7 +14,6 @@
     background-color: #1b1b1b;
     padding: 0px 20px;
     display: inline-block;
-    
 }
 
 #works h3{
@@ -23,11 +25,31 @@
     text-transform: uppercase;
 
 }
-#works p{
+
+
+#works .slide {
+
+}
+
+#works .slide .contents{
+    float: left;
+    width: 330px; 
+    height: 450px;
+    padding:0px 10px;
+}
+
+#works .slide .contents h3{
+    font-size: 32px;
+    display: block;
     text-align: left;
-    margin-bottom: 12px;
-     line-height: 1.5em;
-     color: black;
-     text-justify:justified;
+}
+
+
+#works .slide .contents p{
+    text-align: left;
+    margin-bottom: 11px;
+    line-height: 1.5em;
+    color: black;
+    text-justify:justified;
 }
 
