@@ -3,7 +3,7 @@
  */
 #slider {
 	width: 950px;
-	height: 500px;
+	height: 450px;
 	list-style: none;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -154,19 +154,21 @@
 /**
  * back arrow  
  */
-.anythingSlider-minimalist-square .back { left: -30px; }
+.anythingSlider-minimalist-square .back { 
+    left: -30px;
+}
 .anythingSlider-minimalist-square .back a { 
     background: url(../images/slider-arrow-left.png) no-repeat;  
     width: 50px;
     height: 60px;
 }
- 
-
-
+  
 /**
  * forward arrow   
  */
-.anythingSlider-minimalist-square .forward { right: -30px; }
+.anythingSlider-minimalist-square .forward { 
+    right: -30px; 
+}
 .anythingSlider-minimalist-square .forward a { 
     background: url(../images/slider-arrow-right.png) no-repeat;  
     width: 50px;
@@ -178,12 +180,12 @@
  * Navigation Links 
  */
 .anythingSlider-minimalist-square .anythingControls {
-	height: 40px;
+	height: 30px;
 	outline: 0;
 	display: none;
 	position: absolute;
-    bottom: 0px;
-    right: 50px;
+    bottom: -36px;
+    right: 28px;
 	margin-left: auto;
     margin-right: auto;
 	z-index: 100;
