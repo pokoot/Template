@@ -31,21 +31,21 @@
 
 }
 
-#works .slide .contents{
+#works .slide .content{
     float: left;
     width: 330px; 
     height: 450px;
     padding:0px 10px;
 }
 
-#works .slide .contents h3{
+#works .slide .content h3{
     font-size: 32px;
     display: block;
     text-align: left;
 }
 
 
-#works .slide .contents p{
+#works .slide .content p{
     text-align: left;
     margin-bottom: 11px;
     line-height: 1.5em;
@@ -53,3 +53,44 @@
     text-justify:justified;
 }
 
+#works .slide .content .apple{
+    background: url('../images/apple_store.png') repeat scroll 0 0 transparent; 
+    display: block;
+    height: 50px;
+    margin: 20px 0;
+    text-indent: -900em;
+    width: 150px;
+}
+
+#works .slide .content .google{
+    background: url('../images/google_play.png') repeat scroll 0 0 transparent; 
+    display: block;
+    height: 50px;
+    margin: 20px 0;
+    text-indent: -900em;
+    width: 150px;
+}
+
+#works .slide .content .link{
+    background: url('../images/icon-globe.png') no-repeat scroll 0 0 transparent;
+    color: #1b1b1b;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 22px;
+    text-align: left;
+    display: block;
+    float: left;
+    text-decoration: none; 
+    line-height: 12px; ;
+    font-size: 13px; 
+    margin-top: 5px;
+    
+}
+
+
+#works .slide .project {
+    height: 450px; 
+    width: 600px;
+    float: right;
+}
