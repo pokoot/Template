@@ -1,0 +1,19 @@
+/**
+ * Central Framework 
+ */
+
+#template_five {
+    background-color: #FFFFFF;
+}
+
+#central {
+    width: 1000px;
+    height:600px;
+    background: url('../images/central.png') repeat scroll 0 0 transparent; 
+}
+
+.lnr { color: #90f020; }
+.Statement { color: #ffff60; }
+.Constant { color: #ffa0a0; }
+.Type { color: #60ff60; }
+.Identifier { color: #40ffff; }
