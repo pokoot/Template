@@ -1,4 +1,4 @@
 template
 ========
 
-My personal website template
+My personal website template.
